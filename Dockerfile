@@ -22,7 +22,7 @@ RUN curl ftp://ftp.isc.org/isc/bind9/9.10.2/bind-9.10.2.tar.gz|tar -xzv \
         && cd bind-9.10.2 \
         && CFLAGS="-static" ./configure --without-openssl --disable-symtable \
         && make \
-        && cp ./bin/dig/dig /usr/bin/ndig
+        && cp ./bin/dig/dig /usr/bin/
 RUN rm -rf bind-9.10.2
 
 EXPOSE 22
